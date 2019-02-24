@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
   posts = [
     {
       title: "post 1",
-      content: "Coucou !",
+      content: "Coucou ! Test de taille de contenu.",
       loveIts: 0,
       created_at: Date
     },
@@ -27,5 +27,6 @@ export class AppComponent {
       created_at: Date
     }
   ];
+
 }
 

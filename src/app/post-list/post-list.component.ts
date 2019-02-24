@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-post-list',
@@ -8,18 +7,12 @@ import { AppComponent } from '../app.component';
 })
 export class PostListComponent implements OnInit {
 
-  posts: any[];
-  
-  // @Input() postTitle: string;
-  // @Input() postContent: string;
-  // @Input() postDate: Date;
-  // @Input() postLike: number = 0;
+  @Input() posts;
 
-  constructor(private appcomponent : AppComponent) { 
+  constructor() { 
   }
 
   ngOnInit() {
-    this.posts = this.appcomponent.posts;
   }
 
 }

@@ -7,27 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  @Input() postTitle: string;
-  @Input() postContent: string;
-  @Input() postDate: Date;
-  @Input() postLike: number = 0;
+  @Input() post;
 
   constructor() { 
-    console.log('construct pop list item');
   }
 
   ngOnInit() {
-    this.postDate = new Date();
+    this.post.created_at = new Date();
   }
 
   onLike() {
-    this.postLike = this.postLike + 1;
-    console.log(this.postLike);
+    this.post.loveIts ++;
+    console.log(this.post.loveIts);
   }
 
   onDislike() {
-    this.postLike -= 1;
-    console.log(this.postLike);
+    this.post.loveIts --;
+    console.log(this.post.loveIts);
   }
 
 }
