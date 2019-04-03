@@ -4,24 +4,23 @@
 				'list-group-item-danger': post.loveIts < 0 }">
 
 <div class="row">
-  <h2 class="col-6">
-      {{ post.title }}
-  </h2>
-  <p class="col-6 text-right font-italic">{{ post.created_at | date : 'd/MM/y H:mm:ss' }}</p>
-  <!-- <p class="col-4 text-right text-uppercase font-italic">{{ post.created_at | date: 'short':'':'fr-FR' }}</p> -->
+    <h2 class="col-6">
+        {{ post.title }}
+    </h2>
+    <p class="col-6 text-right font-italic">{{ post.created_at | date : 'd/MM/y H:mm:ss' }}</p>
 </div>     
 
-  <div class="row">
-    <p class="col-12">{{post.content}}</p>
-  </div>
+    <div class="row">
+        <p class="col-12">{{post.content}}</p>
+    </div>
 
-  <button class="btn btn-success"
-          (click)="onLike()">Love it
-  </button>
+    <button class="btn btn-success"
+            (click)="onLike()">Love it
+    </button>
 
-  <button class="btn btn-danger"
+    <button class="btn btn-danger"
           (click)="onDislike()">Don't love it !!!
-  </button>
+    </button>
 </li>
 
 
